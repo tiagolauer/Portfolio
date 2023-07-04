@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Gabriela Souza">
+    <meta name="description" content="Portfólio do desenvolvedor web Tiago Lauer">
+    <meta name="keywords" content="portfolio, html, front-end, desenvolvimento, css, javascript">
+    <title>Tiago Lauer</title>
+    <link rel="icon" href="./icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header>
+    <nav data-menu="suave">
+       <p><a href="#home">&lsaquo;ALASKA/&rsaquo;</a></p>
+       <button data-menu="button" aria-controls="menu"></button>
+      <ul data-menu="list" id="menu">
+        <a href="#home">
+        <li>Home</li>
+      </a>
+        <a href="#sobre">
+          <li>About</li>
+        </a>
+        <a href="#experiencia">
+        <li>Experience</li>
+      </a>
+      <a href="#projetos">
+        <li>Projects</li>
+      </a>
+      </ul>
+    </nav>
+  </header>
+
+    <main>
+      <section class="principal" id="home" >
+        <div class="principal__left">
+          <h1>Hello, I am</h1>
+            <span class="principal__sentence"></span>
+            <span class="principal__input-cursor"></span>
+          <h1>Front-End Developer</h1>
+          <div class="principal__botao">
+            <a href="https://www.linkedin.com/in/tiago-lauer-7601871ab/" target="_blank">
+              <div class="principal__botao-linkedin">
+                <img src="./assets/linkedin.png" alt="" />
+                <p>LinkedIn</p>
+              </div>
+            </a>
+            <a href="https://github.com/tiagolauer" target="_blank">
+              <div class="principal__botao-github">
+                <img src="./assets/github.png" alt="" />
+                <p>Github</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="principal__right">
+          <img src="/assets/alaskaboy.png" alt="Alaska boy in action xD" data-tilt>
+        </div>
+        
+        <div class="scroll" data-menu="suave"><a href="#sobre" > <p> scroll down </p> <img src="./assets/scroll.png" alt="Use this to scrow down"></a></div>
+      </section>
+      <section class="sobre-mim" id="sobre" data-anime="js-scroll">
+        <div class="sobre-mim__foto">
+          <img src="./assets/eu.jpg" alt="A Selfie of Tiago Lauer" />
+        </div>
+        <div class="sobre-mim__descricao" >
+          <h1>About Me</h1>
+          <h2>Balneário Camboriú, Santa Catarina</h2>
+          <p>
+            I'm a Front-End developer and I'm currently working as a web developer in a Brazilian company. 
+            I've been connected to the world of technology since I was 13 years old and working as a developer 
+            for almost 5 years. Always studying. Always learning. Always being better than yesterday.
+          </p>
+          <div class="sobre-mim__descricao-buttons">
+            <a href="./assets/Tiago-Lauer.pdf" download="">
+              <div class="sobre-mim__descricao-buttons-curriculo">
+                <img src="./assets/download-da-nuvem.png" alt="" />
+                <p>Curriculum</p>
+              </div>
+            </a>
+            <a
+              href="mailto: tiagoestrelalauer@gmail.com?subject=Alaska, came from ur portfolio! :)"
+              target="_blank"
+            >
+              <div class="sobre-mim__descricao-buttons-email">
+                <img src="./assets/email.png" alt="" />
+                <p>E-mail</p>
+              </div>
+            </a>
+          </div>
+          
+        </div>
+      </section>
+      <section class="experiencia" id="experiencia" data-anime="js-scroll">
+        <h1>Experience</h1>
+        <div class="experiencia__wrapper">
+          <section class="experiencia__lugares">
+            <ul data-tab="menu">
+              <li>&#128064&#128064</li>
+              <li>Bravus Sistemas</li>
+              <li>Hollow Moon Server</li>
+            </ul>
+          </section>
+          <div class="experiencia__descricao" data-tab="content">
+            <section data-anime="show-right">
+              <h2>Looking for my first international experience :)</h2>
+              <p class="experiencia__descricao-local">Maybe at your company?</p>
+              <p>I'm available for a chat, you can contact me via email tiagoestrelalauer@gmail.com &#10024</p>
+            </section>
+            <section data-anime="show-right">
+            <h2>Front-End Dev</h2>
+            <span>May 2022 - Now</span>
+            <p class="experiencia__descricao-local">Bravus Sistemas - Web Developer</p>
+            <p>
+              As my first official experience as a web developer, I'm currently working for <a href="https://www.bravussistemas.com.br/" target="_blank">Bravus Sistemas.</a> 
+              As the company's only web developer, my role is to maintain the website (coded by me). I'm also 
+              working on the front-end of the company's application, which consists of a platform where our 
+              customers can pay their debts to the company.
+            </p>
+          </section>
+          <section data-anime="show-right">
+            <h2>Personal Project</h2>
+            <span>Sep 2022 - Now</span>
+            <p class="experiencia__descricao-local">Hollow Moon Minecraft Server Project</p>
+            <p>
+              As a game lover, I own a Minecraft server. Therefore, I am developing a web platform where players can access and see what's new, 
+              in addition to being able to talk to each other. The project is at an advanced stage and should be launched and posted soon.
+            </p>
+          </section>
+        </div>
+        </section>
+        </div>
+      </section>
+      <section class="projetos" id="projetos" data-anime="js-scroll">
+        <h1>Projects</h1>
+        <div class="projetos__wrapper">
+          <section class="projetos__card">
+            <a href="https://gabrielaguaru.github.io/animaisfantasticos/" target="_blank">
+            <img src="./assets/projeto1.png" alt="" class="projeto-img"/>
+          </a>
+            <h2>Codeine Discord Bot Website</h2>
+            <p>
+              I developed a bot on Discord that is capable of playing music from Youtube, SoundCloud and Spotify. 
+              Of course, this project cannot be posted here, as the source code needs to be preserved. However, 
+              the same is having its website developed and is already on the air with a few features.
+            </p>
+            <span>Technologies used in the project: HTML (69.1%), CSS(27.2%), JavaScript (3.7%).</span>
+            <a href="https://codeinebot.netlify.app/" target="_blank">
+              <div class="projetos__card-button">
+                <img src="./assets/link.png" alt="Codeine Project Image">
+                TAKE A LOOK
+              </div>
+            </a>
+          </section>
+          <section class="projetos__card">
+            <a href="https://gabrielaguaru.github.io/vingadores/" target="_blank">
+            <img src="./assets/projeto2.png" alt="Imagem do filme vingadores representando meu projeto número 2" class="projeto-img"/>
+            </a>
+            <h2>Lugia Animes</h2>
+            <p>
+              I'm working on a project that's a little more complex than usual. I'm developing an anime platform where people can access content and watch it for free.
+            </p>
+            <span>Technologies used in the project: HTML (25.2%), CSS (11.3%), JavaScript (56.1%), SCSS (7.4%).</span>
+            <a href="https://gabrielaguaru.github.io/vingadores/" target="_blank"
+              >
+              <div class="projetos__card-button">
+              <img src="./assets/link.png" alt="">
+              TAKE A LOOK
+            </div>
+            </a>
+          </section>
+          <section class="projetos__card">
+            <a href="https://github.com/tiagolauer/CadastroJS" target="_blank">
+            <img src="./assets/projeto3.png" alt="" class="projeto-img"/>
+            </a>
+            <h2>Register Screen</h2>
+            <p>
+              This is a more open project, as it was done for a job test some time ago. 
+              The project consists of a responsive registration screen, where data must be validated. 
+              As it is not a personal project, I will be leaving access to GITHUB when clicking on the banner.
+            </p>
+            <span>Technologies used in the project: HTML (28.0%), CSS (57.7%), JavaScript (14.3%).</span>
+            <a href="https://cadastrojs.netlify.app/" target="_blank">
+              <div class="projetos__card-button">
+                <img src="./assets/link.png" alt="Imagem logo do pokémon representando meu projeto número 3">
+                TAKE A LOOK
+              </div>
+            </a>
+          </section>
+          <section class="projetos__card">
+            <a href="https://www.bravussistemas.com.br/" target="_blank">
+            <img src="./assets/projeto4.png" alt="Imagem logo de folhas de uma planta representando meu projeto número 4" class="projeto-img"/>
+          </a>
+            <h2>Bravus Sistemas Website</h2>
+            <p>
+              As a professional job, it's essential that the source code is not available, right? Well, 
+              this website was made for the company I currently work for as a web developer.
+            </p>
+            <span>Technologies used in the project: HTML (74.7%), CSS (19.0%), JavaScript (1.2%), PHP (5.1%).</span>
+            <a href="https://www.bravussistemas.com.br/" target="_blank">
+              <div class="projetos__card-button">
+                <img src="./assets/link.png" alt="">
+                Visualizar
+              </div>
+            </a>
+   
+          </section>
+        </div>
+      </section>
+
+      <footer>
+        <p>Made with <img src="./assets/heart.png" alt="Heart Icon"> by</p><a href="https://www.linkedin.com/in/tiago-lauer-7601871ab/" target="_blank"><span> Tiago Lauer</span></a>
+      </footer>
+    </main>
+
+    <script src="./js/script.js" type="module"></script>
+    <script src="./js/modules/vanilla-tilt.min.js"></script>
+  </body>
+</html>
