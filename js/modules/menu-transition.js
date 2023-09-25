@@ -1,8 +1,9 @@
 export default function initMenuTransition() {
-    
+    const nav = document.querySelector('nav');
+  
     function transitionMenu() {
-        const nav = document.querySelector('nav');
-        nav.classList.toggle("fixed", window.scrollY > 0)
+      nav.classList.toggle("fixed", window.pageYOffset > 0);
     }
-    window.addEventListener('scroll', transitionMenu)
-}
+  
+    window.addEventListener('scroll', transitionMenu);
+  }

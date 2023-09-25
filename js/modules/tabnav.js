@@ -19,10 +19,13 @@ export default function initTabNav() {
       tabMenu[index].classList.add("active");
     }
 
-    tabMenu.forEach((item, index) => {
-      item.addEventListener("click", () => {
-        activeTab(index);
-      });
+    document.querySelector("[data-tab='menu']").addEventListener("click", (event) => {
+      if (event.target.tagName === "LI") {
+        const index = Array.from(tabMenu).indexOf(event.target);
+        if (index !== -1) {
+          activeTab(index);
+        }
+      }
     });
   }
 }

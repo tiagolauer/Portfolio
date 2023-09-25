@@ -5,8 +5,6 @@ import initScrollSuave from "./modules/scroll-suave.js";
 import initTabNav from "./modules/tabnav.js";
 import initTyping from "./modules/typing.js";
 
-
-
 initTabNav();
 initScrollSuave();
 initAnimationScroll();

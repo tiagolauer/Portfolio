@@ -1,16 +1,14 @@
 export default function initAnimationScroll() {
     const sections = document.querySelectorAll("[data-anime='js-scroll']");
-
-    function animaScroll() {
-        sections.forEach((section) => {
-            const halfSection = window.innerHeight * 0.6;
-            const sectionTop = section.getBoundingClientRect().top;
-            const isSectionVisible = sectionTop - halfSection < 0;
-            if(isSectionVisible) {
-                section.classList.add('animation')
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animation');
             }
-        })
-    }
+        });
+    }, { threshold: 0.6 });
 
-    window.addEventListener('scroll', animaScroll);
+    sections.forEach((section) => {
+        observer.observe(section);
+    });
 }
