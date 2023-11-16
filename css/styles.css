@@ -17,6 +17,7 @@ p {
 
 main {
   color: #c4c4c4;
+  margin: 1rem;
 }
 
 footer {
@@ -259,6 +260,7 @@ a {
   position: relative;
   background-color: #121212;
   margin-top: 1rem;
+  margin: 1rem;
   transition: 0.3s;
   font-weight: 600;
   font-size: 0.95rem;
@@ -483,6 +485,7 @@ a {
 
 .projetos__card {
   width: 90%;
+  margin-bottom: 1rem;
 }
 
 .projetos__card h2 {
