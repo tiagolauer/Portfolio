@@ -16,19 +16,27 @@
       </button>
     </div>
 
-    <!-- NavBar Links -->
+    <!-- NavBar Links for mobile -->
     <nav :class="[
-      'fixed inset-0 z-20 flex flex-col items-center justify-center bg-[#111827] transition-transform duration-300 md:bg-transparent md:static md:flex md:space-x-5',
+      'fixed inset-0 z-20 flex flex-col items-center justify-center bg-[#111827] md:hidden transition-transform duration-300',
       isMenuOpen ? 'translate-x-0' : '-translate-x-full'
-    ]" class="md:translate-x-0">
-      <a href="#about" class="block text-white transition hover:text-primary ease-linear text-2xl md:text-lg"
+    ]">
+      <a href="#about" class="block text-white transition hover:text-primary ease-linear text-2xl"
         @click="scrollToSection('#about')">About Me</a>
-      <a href="#skills" class="block text-white transition hover:text-primary ease-linear text-2xl md:text-lg"
+      <a href="#skills" class="block text-white transition hover:text-primary ease-linear text-2xl"
         @click="scrollToSection('#skills')">Skills</a>
-      <a href="#projects" class="block text-white transition hover:text-primary ease-linear text-2xl md:text-lg"
+      <a href="#projects" class="block text-white transition hover:text-primary ease-linear text-2xl"
         @click="scrollToSection('#projects')">Projects</a>
-      <a href="#contact" class="block text-white transition hover:text-primary ease-linear text-2xl md:text-lg"
+      <a href="#contact" class="block text-white transition hover:text-primary ease-linear text-2xl"
         @click="scrollToSection('#contact')">Contact Info</a>
+    </nav>
+
+    <!-- Desktop NavBar Links -->
+    <nav class="hidden md:flex space-x-8">
+      <a href="#about" class="text-white hover:text-primary">About Me</a>
+      <a href="#skills" class="text-white hover:text-primary">Skills</a>
+      <a href="#projects" class="text-white hover:text-primary">Projects</a>
+      <a href="#contact" class="text-white hover:text-primary">Contact Info</a>
     </nav>
   </header>
 </template>
