@@ -36,7 +36,7 @@ const ContactInfo = defineAsyncComponent(() => import('@/components/ContactInfo.
 const Footer = defineAsyncComponent(() => import('@/components/Footer.vue'));
 const BackToTop = defineAsyncComponent(() => import('@/components/BackToTop.vue'));
 
-import loadingSpinner from './components/loadingSpinner.vue';
+import loadingSpinner from './components/LoadingSpinner.vue';
 </script>
 <style>
 * {
