@@ -74,7 +74,7 @@ const Projects = ref([
     {
         id: 1,
         category: 'web development',
-        image: 'src/assets/bravusProject.jpg',
+        image: 'assets/bravusProject.jpg',
         title: 'Bravus Sistemas Website',
         description:
             'The Bravus Sistemas website was developed with a focus on performance, user experience, and scalability.',
@@ -85,7 +85,7 @@ const Projects = ref([
     {
         id: 2,
         category: 'web development',
-        image: 'src/assets/cadastroProject.jpg',
+        image: 'assets/cadastroProject.jpg',
         title: 'Register Screen Test',
         description:
             'The CadastroJS project was developed as a technical test for a job application.',
@@ -96,7 +96,7 @@ const Projects = ref([
     {
         id: 3,
         category: 'web development',
-        image: 'src/assets/currencyTask.png',
+        image: 'assets/currencyTask.png',
         title: 'Currency Task Test',
         description:
             'The Currency Task project was built as an admission test, focusing on real-time currency conversion.',
