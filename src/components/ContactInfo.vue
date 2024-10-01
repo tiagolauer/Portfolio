@@ -1,80 +1,93 @@
 <template>
     <section class="text-white mt-20" id="contact">
-        <h2 class="text-4xl font-bold text-white text-left mb-4 px-4 xl:pl-16">Let's Connect</h2>
+        <h2 class="text-4xl font-bold mb-4 px-4 xl:pl-16">Let's Connect</h2>
+
         <div class="grid md:grid-cols-2 gap-4 relative px-4 xl:px-16 mt-8" data-aos="zoom-in-up">
-            <div>
-                <p class="text-[#adb7be]"> Feel Free to reach out me !
-                </p>
-                <div class="col-lg-4 col-md-4 mb-lg-0 mt-5">
-                    <div class="flex mb-10 items-center">
-                        <div class="p-2"
-                            style="background: #111a3e; width: 50px;height: 46px; display: flex;justify-content: center; border-radius: 50%;
-                        overflow: hidden;border: 1px solid#111a3e;backdrop-filter: blur(9px);-webkit-backdrop-filter: blur(9px);">
-                            <img src="https://img.icons8.com/metro/50/ffffff/new-post.png" alt="new-post" class="w-6">
+            <!-- Contact Info Section -->
+            <article>
+                <p class="text-[#adb7be]">Feel free to reach out to me!</p>
+
+                <div class="mt-5 space-y-10">
+                    <!-- Email -->
+                    <div class="flex items-center">
+                        <div
+                            class="p-2 bg-[#111a3e] w-12 h-12 flex justify-center items-center rounded-full border border-[#111a3e] backdrop-blur-lg">
+                            <img src="https://img.icons8.com/metro/50/ffffff/new-post.png" alt="Email" class="w-6" />
                         </div>
-                        <div class="ml-5 text-white">
-                            <h4>Email</h4>
+                        <div class="ml-5">
+                            <h4 class="text-white">Email</h4>
                             <p>tiagoestrelalauer@gmail.com</p>
                         </div>
                     </div>
-                    <div class="flex mb-10 items-center">
-                        <div class="p-2"
-                            style="background: #111a3e; width: 50px;height: 46px; display: flex;justify-content: center; border-radius: 50%;
-                        overflow: hidden;border: 1px solid#111a3e;backdrop-filter: blur(9px);-webkit-backdrop-filter: blur(9px);">
-                            <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="phone" class="w-6">
+
+                    <!-- Phone -->
+                    <div class="flex items-center">
+                        <div
+                            class="p-2 bg-[#111a3e] w-12 h-12 flex justify-center items-center rounded-full border border-[#111a3e] backdrop-blur-lg">
+                            <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Phone" class="w-6" />
                         </div>
-                        <div class="ml-5 text-white">
-                            <h4>Phone</h4>
+                        <div class="ml-5">
+                            <h4 class="text-white">Phone</h4>
                             <p>+55 (47) 984024581</p>
                         </div>
                     </div>
-                    <div class="flex mb-10 items-center">
-                        <div class="p-2"
-                            style="background: #111a3e; width: 50px;height: 46px; display: flex;justify-content: center; border-radius: 50%;
-                        overflow: hidden;border: 1px solid#111a3e;backdrop-filter: blur(9px);-webkit-backdrop-filter: blur(9px);">
-                            <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="linkedin"
-                                class="w-6">
+
+                    <!-- LinkedIn -->
+                    <div class="flex items-center">
+                        <div
+                            class="p-2 bg-[#111a3e] w-12 h-12 flex justify-center items-center rounded-full border border-[#111a3e] backdrop-blur-lg">
+                            <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn"
+                                class="w-6" />
                         </div>
-                        <div class="ml-5 text-white">
-                            <h4>LinkedIn</h4>
-                            <a href="https://www.linkedin.com/in/tiagolauer/" target="_blank">
-                                <p>Tiago Lauer</p>
-                            </a>
+                        <div class="ml-5">
+                            <h4 class="text-white">LinkedIn</h4>
+                            <a href="https://www.linkedin.com/in/tiagolauer/" target="_blank" class="text-primary">Tiago
+                                Lauer</a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div style="background: #111a3e; width: 100%;height: 100%; border-radius: 20px;
-            overflow: hidden;border: 1px solid #111a3e;backdrop-filter: blur(9px);-webkit-backdrop-filter: blur(9px);">
-                <form class="flex flex-col p-2" data-aos="zoom-in-up">
-                    <div class="mb-6">
-                        <label for="email" class="text-white block mb-2 text-sm font-medium">email</label>
-                        <input type="email" id="email"
-                            class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                            placeholder="email@gmail.com" name="email">
+            </article>
+
+            <!-- Contact Form Section -->
+            <div class="bg-[#111a3e] p-6 rounded-lg border border-[#111a3e] backdrop-blur-lg">
+                <form class="flex flex-col space-y-6" @submit.prevent="handleSendMessage" data-aos="zoom-in-up">
+                    <!-- Email Field -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                        <input type="email" id="email" v-model="formData.email"
+                            class="bg-[#111827] text-gray-100 text-sm rounded-lg w-full p-2.5 placeholder-gray-400"
+                            placeholder="email@gmail.com" required />
                     </div>
-                    <div class="mb-6">
-                        <label for="subject" class="text-white block mb-2 text-sm font-medium">Subject</label>
-                        <input type="subject" id="subject"
-                            class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                            placeholder="subject" name="subject">
+
+                    <!-- Subject Field -->
+                    <div>
+                        <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                        <input type="text" id="subject" v-model="formData.subject"
+                            class="bg-[#111827] text-gray-100 text-sm rounded-lg w-full p-2.5 placeholder-gray-400"
+                            placeholder="Subject" required />
                     </div>
-                    <div class="mb-6">
-                        <label for="message" class="text-white block mb-2 text-sm font-medium">Message</label>
-                        <textarea id="Message"
-                            class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                            placeholder="Let's talk about ... " name="Message"></textarea>
+
+                    <!-- Message Field -->
+                    <div>
+                        <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                        <textarea id="message" v-model="formData.message"
+                            class="bg-[#111827] text-gray-100 text-sm rounded-lg w-full p-2.5 placeholder-gray-400"
+                            placeholder="Let's talk about ..." required></textarea>
                     </div>
-                    <button type="button" :disabled="buttonDisabled" @click="handleSendMessage"
-                        class="z-1 w-[100%!important] px-6 md:px-7 py-3 rounded-full sm:w-max flex justify-center text-white bg-primary border-2 border-transparent"
-                        :class="{ 'opacity-50 cursor-not-allowed': buttonDisabled }">
+
+                    <!-- Submit Button -->
+                    <button type="submit"
+                        class="w-full py-3 rounded-full text-white bg-primary border-2 border-transparent transition-opacity duration-300 flex justify-center"
+                        :class="{ 'opacity-50 cursor-not-allowed': buttonDisabled }" :disabled="buttonDisabled">
                         Send Message
                     </button>
                 </form>
             </div>
-            <div class="bg-gradient-to-tr opacity-25 from-[#570cac] to-primary blur-2xl h-20 w-80 z-0 absolute -top-1/2 -left-4 transform -translate-x-2/3 
-        -translate-1/2
-        "></div>
+
+            <!-- Background Decoration -->
+            <div
+                class="absolute -top-1/2 -left-4 transform -translate-x-2/3 -translate-1/2 w-80 h-20 bg-gradient-to-tr from-[#570cac] to-primary blur-2xl opacity-25">
+            </div>
         </div>
     </section>
 </template>
@@ -83,27 +96,29 @@
 export default {
     data() {
         return {
-            clickCount: 0,  // Contador de cliques
+            clickCount: 0, // Contador de cliques
             resetTimer: null, // Temporizador para resetar o contador
-            buttonDisabled: false // Controla se o botão está desabilitado
+            buttonDisabled: false, // Controla se o botão está desabilitado
+            formData: {
+                email: '',
+                subject: '',
+                message: ''
+            }
         };
     },
     methods: {
         handleSendMessage() {
             this.clickCount++;
 
-            // Verifica se o usuário clicou mais de 5 vezes
             if (this.clickCount > 5) {
                 this.$toast.open({
-                    message: 'Are you dumb or idiot? Stop Spamming!',
+                    message: 'Please stop spamming!',
                     type: 'warning',
                     position: 'top-right',
                     duration: 5000
                 });
-                // Desabilita o botão
-                this.buttonDisabled = true;
+                this.buttonDisabled = true; // Desabilita o botão
             } else {
-                // Mostra o toast padrão de desenvolvimento
                 this.$toast.open({
                     message: 'This feature is under development. Please check back later.',
                     type: 'info',
@@ -112,15 +127,15 @@ export default {
                 });
             }
 
-            // Reseta o contador após 10 segundos e reabilita o botão
+            // Reseta o contador e reabilita o botão após 10 segundos
             if (this.resetTimer) {
                 clearTimeout(this.resetTimer);
             }
 
             this.resetTimer = setTimeout(() => {
                 this.clickCount = 0;
-                this.buttonDisabled = false; // Reabilita o botão após o tempo
-            }, 10000); // 10 segundos de intervalo para resetar o contador
+                this.buttonDisabled = false;
+            }, 10000); // 10 segundos para resetar o contador
         }
     }
 };
